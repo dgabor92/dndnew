@@ -19,18 +19,21 @@ const features = [
     description:
       "A vámkezelés során a vámkezelő a vámhatóság megbízásából a vámkezelési eljárásokat végzi.",
     icon: ShieldCheckIcon,
+    link: "#",
   },
   {
     name: "Coaching",
     description:
       "A coaching egy olyan fejlesztési folyamat, amelynek során a coach (tréner) segíti a coachee (ügyfél) személyes és szakmai céljainak elérését.",
     icon: LightBulbIcon,
+    link: "https://coaching.dndnew.hu/",
   },
   {
     name: "Webfejlesztés",
     description:
       "A webfejlesztés magába foglalja a weboldalak, webes alkalmazások, webes szolgáltatások fejlesztését.",
     icon: CodeIcon,
+    link: "https://dgabor.com/",
   },
 ];
 
@@ -62,6 +65,17 @@ function Offering() {
                       {feature.description}
                     </p>
                   </div>
+                  {/* need a section for link */}
+                  {feature.link && feature.link !== "#" ? (
+                    <div className="mt-6">
+                      <button
+                        onClick={() => (window.location.href = feature.link)}
+                        className="inline-flex items-center text-base font-medium text-cyan-700 hover:text-cyan-800"
+                      >
+                        Bővebben
+                      </button>
+                    </div>
+                  ) : null}
                 </div>
               </div>
             ))}

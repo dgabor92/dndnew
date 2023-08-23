@@ -7,6 +7,8 @@ import Contact from "./components/Contact";
 import Offering from "./components/Offering";
 import Testimonial from "./components/Testimonial";
 import Blog from "./components/Blog";
+import Logos from "./components/Logos";
+import Team from "./components/Team";
 
 function App() {
   return (
@@ -47,9 +49,9 @@ function App() {
                   <div className="lg:py-24">
                     <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-7 xl:text-7xl pb-3 sm:pb-5">
                       <span className="block">D&DNew Kft.</span>
-                      <span className="pb-3 block bg-clip-text text-transparent bg-gradient-to-r from-teal-200 to-cyan-400 sm:pb-5">
+                      {/* <span className="pb-3 block bg-clip-text text-transparent bg-gradient-to-r from-teal-200 to-cyan-400 sm:pb-5">
                         Dream. Work. Achieve.
-                      </span>
+                      </span> */}
                     </h1>
                     <p className="text-base text-gray-300 sm:text-xl lg:text-lg xl:text-xl">
                       Egy olyan csapat vagyunk, amely az ügyfeleink számára
@@ -77,8 +79,10 @@ function App() {
           <Testimonial />
 
           {/* Blog section */}
-          <Blog />
-
+          {/* <Blog /> */}
+          {/* Logo cloud section */}
+          {/* <Logos /> */}
+          <Team />
           {/* CTA Section */}
           {/* <div className="relative bg-gray-900">
             <div className="relative h-56 bg-indigo-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
