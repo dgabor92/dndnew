@@ -1,5 +1,3 @@
-import tamas from "../assets/tesa3.png";
-
 const people = [
   {
     name: "Deutsch Pál",
