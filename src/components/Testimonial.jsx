@@ -3,7 +3,7 @@ import React from "react";
 function Testimonial() {
   return (
     <div className="pb-16 bg-gradient-to-r from-teal-500 to-cyan-600 lg:pb-0 lg:z-10 lg:relative">
-      <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-8">
+      <div className="sm:px-8 lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-8">
         {/* <div className="relative lg:-my-8">
           <div
             aria-hidden="true"
@@ -19,7 +19,7 @@ function Testimonial() {
             </div>
           </div>
         </div> */}
-        <div className="mt-12 lg:m-0 lg:col-span-2 lg:pl-8">
+        <div className="mt-12 sm:mt-4 lg:m-0 lg:col-span-2 lg:pl-8">
           <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:px-0 lg:py-20 lg:max-w-none">
             <blockquote>
               <div>

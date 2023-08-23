@@ -57,7 +57,7 @@ export default function Team() {
                 <div className="space-y-4 sm:grid sm:grid-cols-3 gap-8 sm:gap-6 sm:space-y-0 lg:gap-8">
                   <div className="max-h-0 aspect-w-2 aspect-h-1 sm:aspect-w-3 sm:aspect-h-4">
                     <img
-                      className="object-cover shadow-lg rounded-lg"
+                      className="object-cover shadow-lg rounded-lg sm:block hidden"
                       src={person.imageUrl}
                       alt=""
                     />
