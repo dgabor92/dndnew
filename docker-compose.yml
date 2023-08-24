@@ -10,26 +10,26 @@ services:
       - ./:/var/www/html/dndnew
       - /var/www/html/dndnew/node_modules
     labels:
-      - "traefik.http.routers.app.rule=Host(`app.localhost`)"
+      - "traefik.http.routers.app.rule=Host(`dndnew.hu`)"
     ports:
       - 5173:5173
     networks:
       - traefik-public
     command: npm run dev
-    depends_on:
-      - traefik
-  traefik:
-    image: traefik:v2.9
-    container_name: traefik
-    command: --api.insecure=true --providers.docker
-    ports:
-      - "80:80"
-      - "8080:8080"
-      - "443:443"
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-    networks:
-      - traefik-public
+    # depends_on:
+    #   - traefik
+  # traefik:
+  #   image: traefik:v2.9
+  #   container_name: traefik
+  #   command: --api.insecure=true --providers.docker
+  #   ports:
+  #     - "80:80"
+  #     - "8080:8080"
+  #     - "443:443"
+  #   volumes:
+  #     - /var/run/docker.sock:/var/run/docker.sock
+  #   networks:
+  #     - traefik-public
 
 networks:
   traefik-public:
