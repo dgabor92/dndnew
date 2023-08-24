@@ -25,7 +25,7 @@ const people = [
     role: "Alapító & Coach",
     imageUrl:
       "https://ui-avatars.com/api/?name=Deutsch+Tamás&background=CCCCCC&color=black&size=150",
-    bio: "Lelkes mérnök vagyok, aki a technológia világát és az emberek fejlődését egyesíti. Cégalapítóként és coach-ként segítek vállalkozásoknak és egyéneknek a siker felé vezető úton.",
+    bio: "Lelkes vezető vagyok, aki a technológia világát és az emberek fejlődését egyesíti. Cégalapítóként és coach-ként segítek vállalkozásoknak és egyéneknek a siker felé vezető úton.",
   },
   {
     name: "Deutsch Gábor",
