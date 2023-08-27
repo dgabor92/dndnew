@@ -1,6 +1,6 @@
 version: "3.7"
 services:
-  app:
+  main:
     build:
       context: .
       dockerfile: Dockerfile.local
@@ -11,9 +11,9 @@ services:
       - /var/www/html/dndnew/node_modules
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.app.rule=Host(`dndnew.hu`)"
-      - "traefik.http.routers.app.entrypoints=websecure"
-      - "traefik.http.routers.app.tls.certresolver=myresolver"
+      - "traefik.http.routers.main.rule=Host(`dndnew.hu`)"
+      - "traefik.http.routers.main.entrypoints=websecure"
+      - "traefik.http.routers.main.tls.certresolver=myresolver"
     ports:
       - 5173:5173
     networks:
