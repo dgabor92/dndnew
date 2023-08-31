@@ -1,6 +1,5 @@
 import { useState } from "react";
-import Logo from "./assets/log.png";
-import reactLogo from "./assets/react.svg";
+import reactLogo from "./assets/dndnew_rm.png";
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import Contact from "./components/Contact";
@@ -23,9 +22,8 @@ function App() {
               <div className="flex items-center flex-1">
                 <div className="flex items-center justify-between w-full md:w-auto">
                   <a href="#">
-                    <span className="sr-only">Workflow</span>
                     <img
-                      className="h-8 w-auto sm:h-10"
+                      className="h-10 w-auto sm:h-12"
                       src={reactLogo}
                       alt=""
                     />

@@ -1,7 +1,29 @@
 import React from "react";
 import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+
+const SERVICE_ID = import.meta.env.VITE_EMAIL_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_EMAIL_TEMPLATE_ID;
+const PUBLIC_KEY = import.meta.env.VITE_EMAIL_PUBLIC_KEY;
 
 function Contact() {
+  const form = useRef();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY).then(
+      (result) => {
+        console.log(result.text);
+        alert("Sikeresen elküldve!");
+        //reset form
+        form.current.reset();
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
+  };
+
   return (
     <div className="isolate bg-white px-6 py-24 sm:py-24 lg:px-8">
       <div className="mx-auto max-w-2xl text-center">
@@ -10,7 +32,8 @@ function Contact() {
         </h2>
       </div>
       <form
-        action="#"
+        ref={form}
+        onSubmit={handleSubmit}
         method="POST"
         className="mx-auto mt-16 max-w-xl sm:mt-20"
       >
@@ -25,8 +48,8 @@ function Contact() {
             <div className="mt-2.5">
               <input
                 type="text"
-                name="first-name"
-                id="first-name"
+                name="user_name"
+                id="user_name"
                 autoComplete="given-name"
                 // className="block w-full rounded-md border-1 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 className="block w-full rounded-md border-2 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -43,8 +66,8 @@ function Contact() {
             <div className="mt-2.5">
               <input
                 type="email"
-                name="email"
-                id="email"
+                name="user_email"
+                id="user_email"
                 autoComplete="email"
                 // className="block w-full rounded-md border-1 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 className="block w-full rounded-md border-2 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
