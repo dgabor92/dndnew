@@ -130,8 +130,9 @@ function App() {
         <footer className="bg-gray-50" aria-labelledby="footer-heading">
           <div className="max-w-md mx-auto px-4 sm:max-w-7xl sm:px-6 lg:px-8">
             <div className="mt-12 border-t border-gray-200 py-8">
-              <p className="text-base text-gray-400 xl:text-center">
-                &copy; 2020 Workflow, Inc. All rights reserved.
+              <p className="text-base text-gray-400 xl:text-right">
+                {/* &copy; 2020 Deutsch Gábor */}
+                @2020 Deutsch Gábor
               </p>
             </div>
           </div>
