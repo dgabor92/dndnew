@@ -1,16 +1,7 @@
-import React from "react";
 import {
-  CloudUploadIcon,
-  CogIcon,
-  LockClosedIcon,
-  MenuIcon,
-  ChevronDownIcon,
-  RefreshIcon,
-  ServerIcon,
   ShieldCheckIcon,
   CodeIcon,
   LightBulbIcon,
-  XIcon,
 } from "@heroicons/react/outline";
 
 const features = [

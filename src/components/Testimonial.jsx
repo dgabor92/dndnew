@@ -1,5 +1,3 @@
-import React from "react";
-
 function Testimonial() {
   return (
     <div className="pb-16 bg-gradient-to-r from-teal-500 to-cyan-600 lg:pb-0 lg:z-10 lg:relative">

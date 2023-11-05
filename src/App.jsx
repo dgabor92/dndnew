@@ -1,12 +1,8 @@
-import { useState } from "react";
 import reactLogo from "./assets/dndnew_rm.png";
-import { Fragment } from "react";
-import { Popover, Transition } from "@headlessui/react";
+import { Popover } from "@headlessui/react";
 import Contact from "./components/Contact";
 import Offering from "./components/Offering";
 import Testimonial from "./components/Testimonial";
-import Blog from "./components/Blog";
-import Logos from "./components/Logos";
 import Team from "./components/Team";
 
 function App() {
